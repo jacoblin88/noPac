@@ -281,7 +281,7 @@ class RemoteShell(cmd.Cmd):
 
         if self.__mode == 'SERVER':
             command += ' & ' + self.__copyBack
-        command += ' & ' + 'del ' + self.__batchFile
+        #command += ' & ' + 'del ' + self.__batchFile
 
         logging.debug('Executing %s' % command)
         resp = scmr.hRCreateServiceW(self.__scmr, self.__scHandle, self.__serviceName, self.__serviceName,
